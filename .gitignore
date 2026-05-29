@@ -1,0 +1,33 @@
+# Dependencias
+/vendor
+/node_modules
+
+# Entorno
+.env
+.env.backup
+.env.production
+
+# Laravel
+/bootstrap/cache/*.php
+/storage/*.key
+/storage/app
+/storage/logs
+/storage/framework/cache
+/storage/framework/sessions
+/storage/framework/views
+
+# Build
+/public/build
+/public/hot
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
