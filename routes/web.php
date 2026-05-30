@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\EntradaController;
 use App\Http\Controllers\SalidaController;
+use App\Http\Controllers\UsuarioController;
 
 // Login
 Route::get('/', [LoginController::class, 'index'])->middleware('guest.custom');
@@ -30,6 +31,14 @@ Route::post('/entradas', [EntradaController::class, 'store'])->middleware(['auth
 Route::get('/entradas/{entrada}/edit', [EntradaController::class, 'edit'])->middleware(['auth.custom', 'admin.custom']);
 Route::put('/entradas/{entrada}', [EntradaController::class, 'update'])->middleware(['auth.custom', 'admin.custom']);
 Route::delete('/entradas/{entrada}', [EntradaController::class, 'destroy'])->middleware(['auth.custom', 'admin.custom']);
+
+// Usuarios — solo Administrador
+Route::get('/usuarios', [UsuarioController::class, 'index'])->middleware(['auth.custom', 'admin.custom']);
+Route::get('/usuarios/create', [UsuarioController::class, 'create'])->middleware(['auth.custom', 'admin.custom']);
+Route::post('/usuarios', [UsuarioController::class, 'store'])->middleware(['auth.custom', 'admin.custom']);
+Route::get('/usuarios/{usuario}/edit', [UsuarioController::class, 'edit'])->middleware(['auth.custom', 'admin.custom']);
+Route::put('/usuarios/{usuario}', [UsuarioController::class, 'update'])->middleware(['auth.custom', 'admin.custom']);
+Route::delete('/usuarios/{usuario}', [UsuarioController::class, 'destroy'])->middleware(['auth.custom', 'admin.custom']);
 
 // Salidas — solo Administrador
 Route::get('/salidas', [SalidaController::class, 'index'])->middleware(['auth.custom', 'admin.custom']);

@@ -3,7 +3,7 @@
 @section('title', 'Editar producto — Inventarios UDB')
 
 @section('page-title', 'Editar producto')
-@section('page-subtitle', '{{ $producto->descripcion }}')
+@section('page-subtitle'){{ $producto->descripcion }}@endsection
 
 @section('content')
 

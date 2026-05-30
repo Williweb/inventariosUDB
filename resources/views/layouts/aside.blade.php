@@ -20,6 +20,13 @@
     </a>
 
     @if(session('rol') === 'Administrador')
+    <a href="/usuarios"
+       class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition
+              {{ request()->is('usuarios*') ? 'bg-orange-50 text-orange-600' : 'text-gray-600 hover:bg-gray-50' }}">
+        <i class="fa-solid fa-users w-4 text-center"></i>
+        Usuarios
+    </a>
+
     <a href="/entradas"
        class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition
               {{ request()->is('entradas*') ? 'bg-orange-50 text-orange-600' : 'text-gray-600 hover:bg-gray-50' }}">
