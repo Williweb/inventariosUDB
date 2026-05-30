@@ -12,7 +12,10 @@
     <div class="w-full max-w-md">
         <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
             <div class="text-center mb-8">
-                <h1 class="text-2xl font-semibold text-gray-800">Inventarios UDB</h1>
+            <h1 class="text-2xl font-semibold text-gray-800 flex flex-col items-center justify-center gap-3 w-full">
+    <img src="https://i.ibb.co/fV1rL0Cd/LOGO-INVENTARIO.png" alt="Logo Inventario" class="h-32 w-auto">
+</h1>
+
                 <p class="text-sm text-gray-400 mt-1">Sistema de inventario</p>
             </div>
 
